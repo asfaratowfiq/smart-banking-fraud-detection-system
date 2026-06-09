@@ -1,0 +1,51 @@
+# API Layer
+fastapi
+uvicorn
+python-multipart
+
+# UI
+streamlit
+requests
+
+# Background Processing
+celery
+redis
+
+# Database
+sqlalchemy
+alembic
+
+# Validation
+pydantic
+
+# PDF Processing
+pymupdf
+pdfplumber
+
+# OCR
+paddleocr
+paddlepaddle
+pdf2image
+
+# Image Processing
+opencv-python
+pillow
+numpy
+
+# LLM
+openai
+tiktoken
+
+# Config / Environment
+python-dotenv
+pyyaml
+
+# Logging
+loguru
+
+# Utility
+rapidfuzz
+
+# Testing
+pytest
+httpx

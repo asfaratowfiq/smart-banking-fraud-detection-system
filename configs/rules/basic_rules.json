@@ -1,0 +1,81 @@
+[
+    {
+        "rule_id": "SAL001",
+        "field": "salary_presence",
+        "operator": "missing",
+        "severity": "HIGH",
+        "weight": 30,
+        "message": "Salary not detected",
+        "document_types": [
+            "salary_slip",
+            "bank_statement"
+        ]
+    },
+
+    {
+        "rule_id": "SAL002",
+        "field": "net_salary",
+        "operator": "greater_than",
+        "threshold": 300000,
+        "severity": "HIGH",
+        "weight": 25,
+        "message": "Unusually high salary detected",
+        "document_types": [
+            "salary_slip"
+        ]
+    },
+
+    {
+        "rule_id": "DOC001",
+        "field": "transaction_count",
+        "operator": "less_than",
+        "threshold": 1,
+        "severity": "MEDIUM",
+        "weight": 10,
+        "message": "Very low transaction activity",
+        "document_types": [
+            "bank_statement"
+        ]
+    },
+
+    {
+        "rule_id": "META001",
+        "field": "ocr_confidence",
+        "operator": "less_than",
+        "threshold": 0.5,
+        "severity": "HIGH",
+        "weight": 20,
+        "message": "Low OCR confidence",
+        "document_types": [
+            "salary_slip",
+            "bank_statement"
+        ]
+    },
+
+    {
+        "rule_id": "META002",
+        "field": "page_count",
+        "operator": "less_than",
+        "threshold": 1,
+        "severity": "MEDIUM",
+        "weight": 10,
+        "message": "Unexpected page count detected",
+        "document_types": [
+            "salary_slip",
+            "bank_statement"
+        ]
+    },
+
+    {
+        "rule_id": "META003",
+        "field": "producer",
+        "operator": "missing",
+        "severity": "LOW",
+        "weight": 5,
+        "message": "PDF producer metadata missing",
+        "document_types": [
+            "salary_slip",
+            "bank_statement"
+        ]
+    }
+]
