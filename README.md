@@ -287,8 +287,8 @@ This project was developed as a practical Proof of Concept to explore AI-assiste
 
 ### Connect
 
-* LinkedIn: [linkedin Profile](www.linkedin.com/in/sourabh-pandit-b2570212)
-* GitHub: [GitHub URL)](https://github.com/Spandit11)
+* LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/sourabh-pandit-b2570212)
+* GitHub: [GitHub URL](https://github.com/Spandit11)
 
 ### Project Focus Areas
 
