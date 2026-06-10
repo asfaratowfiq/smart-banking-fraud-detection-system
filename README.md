@@ -1,149 +1,36 @@
-# Smart Banking Fraud Detection System
+# 🏦 Smart Banking Fraud Detection System
 
-## Overview
+An AI-powered banking document verification platform that detects potential fraud indicators in Salary Slips and Bank Statements using OCR extraction, metadata analysis, rule-based validation, and AI-generated risk assessment.
 
-Smart Banking Fraud Detection System is an AI-powered document verification platform designed to detect potential fraud indicators in Salary Slips and Bank Statements.
+Supports:
 
-The solution combines:
-
-* OCR-based document extraction
-* Metadata analysis
-* Data normalization
-* Rule-based fraud detection
-* AI-generated risk assessment summaries
-* Interactive Streamlit dashboard
-
-The system supports:
-
-* Salary Slip Verification
-* Bank Statement Verification
-* Combined Verification
+👉 Salary Slip Verification
+👉 Bank Statement Verification
+👉 Combined Document Verification
+👉 Payroll Arithmetic Validation (SAL003)
+👉 Balance Reconciliation Validation (BANK001)
+👉 AI Risk Assessment & Recommendations
+👉 Streamlit Dashboard + FastAPI Backend
+👉 Celery & Redis Asynchronous Processing
 
 ---
 
-# Current Version
+# 📸 Demo Screenshots
 
-Version: 1.2
+### 🖥️ Fraud Detection Dashboard
 
-Status: Demo Ready
+![Fraud Detection Dashboard](screenshots/MainScreen.png)
 
-## Implemented Features
+### 📄 Salary Slip Validation
 
-✓ Salary Slip Verification
+![Salary Slip Validation](screenshots/SalarySlipAnalysis.png)
 
-✓ Bank Statement Verification
+### 🏦 Bank Statement Validation
 
-✓ Combined Verification
-
-✓ Payroll Arithmetic Validation (SAL003)
-
-✓ Balance Reconciliation Validation (BANK001)
-
-✓ OCR Quality Validation
-
-✓ Metadata Validation
-
-✓ AI Risk Assessment
-
+![Bank Statement Validation](screenshots/BankStatementAnalysis.png)
 ---
 
-# Architecture
-
-## High Level Flow
-
-```text
-User Upload
-    ↓
-Streamlit UI
-    ↓
-FastAPI Backend
-    ↓
-Celery Task Queue
-    ↓
-Redis Broker
-    ↓
-OCR Extraction
-    ↓
-Metadata Analysis
-    ↓
-Normalization Engine
-    ↓
-Fraud Detection Engine
-    ↓
-AI Risk Assessment
-    ↓
-Fraud Report
-```
-
----
-
-# Technology Stack
-
-| Component             | Technology            |
-| --------------------- | --------------------- |
-| Frontend              | Streamlit             |
-| Backend API           | FastAPI               |
-| Background Processing | Celery                |
-| Message Broker        | Redis                 |
-| OCR Processing        | OCR Pipeline          |
-| AI Reasoning          | OpenAI / Azure OpenAI |
-| Language              | Python                |
-
----
-
-# Fraud Detection Rules
-
-## Salary Rules
-
-| Rule ID | Description                   |
-| ------- | ----------------------------- |
-| SAL001  | Salary Missing                |
-| SAL002  | Unusually High Salary         |
-| SAL003  | Payroll Arithmetic Validation |
-
----
-
-## Bank Rules
-
-| Rule ID | Description                       |
-| ------- | --------------------------------- |
-| DOC001  | Low Transaction Activity          |
-| BANK001 | Balance Reconciliation Validation |
-
----
-
-## Metadata Rules
-
-| Rule ID | Description               |
-| ------- | ------------------------- |
-| META001 | Low OCR Confidence        |
-| META002 | Invalid Page Count        |
-| META003 | Missing Producer Metadata |
-
----
-
-## Cross Validation Rules
-
-| Rule ID  | Description            |
-| -------- | ---------------------- |
-| CROSS001 | Salary Mismatch        |
-| CROSS002 | Month Mismatch         |
-| CROSS003 | Missing Salary Credit  |
-| CROSS004 | Invalid Bank Statement |
-| CROSS005 | Invalid Salary Slip    |
-
----
-
-## Fraud Indicators
-
-| Rule ID  | Description                  |
-| -------- | ---------------------------- |
-| FRAUD001 | High Salary Credit           |
-| FRAUD002 | Excessive Transaction Volume |
-
----
-
-# Project Structure
+# 📁 Project Structure
 
 ```text
 smart-banking-fraud-detection-system/
@@ -163,6 +50,8 @@ smart-banking-fraud-detection-system/
 │
 ├── ui/
 │
+├── temp_storage/
+│
 ├── README.md
 ├── TESTING.md
 └── FUTURE_ENHANCEMENTS.md
@@ -170,36 +59,39 @@ smart-banking-fraud-detection-system/
 
 ---
 
-# Prerequisites
+# 🚀 Features
 
-Install the following:
-
-* Python 3.11+
-* Redis Server
-* Git
+* Upload Salary Slip PDFs
+* Upload Bank Statement PDFs
+* Combined document verification
+* OCR-based data extraction
+* PDF metadata analysis
+* Data normalization engine
+* Rule-based fraud detection
+* Cross-document validation
+* AI-generated fraud assessment
+* Risk scoring engine
+* Streamlit dashboard
+* Asynchronous processing using Celery & Redis
 
 ---
 
-# Installation
+# ⚙️ Setup Instructions
 
-## Clone Repository
+## 1. Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Spandit11/smart-banking-fraud-detection-system
 cd smart-banking-fraud-detection-system
 ```
 
----
-
-## Create Virtual Environment
+## 2. Create Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
----
-
-## Activate Virtual Environment
+## 3. Activate Environment
 
 ### Windows
 
@@ -213,23 +105,13 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
----
-
-## Install Dependencies
+## 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-# Running the Application
-
-## Start Redis
-
-Ensure Redis is installed and running.
-
-Example:
+## 5. Start Redis
 
 ```bash
 redis-server
@@ -237,15 +119,15 @@ redis-server
 
 ---
 
-## Start Complete Application
+# 💻 Run the Application
 
-The project includes a startup script:
+Start the complete application:
 
 ```bash
 scripts\start_all.bat
 ```
 
-This script automatically starts:
+This automatically starts:
 
 * FastAPI Backend
 * Celery Worker
@@ -253,17 +135,15 @@ This script automatically starts:
 
 ---
 
-# Access Application
+# 🌐 Application URLs
 
-## Streamlit UI
+### Streamlit Dashboard
 
 ```text
 http://localhost:8501
 ```
 
----
-
-## FastAPI Swagger Documentation
+### FastAPI Swagger
 
 ```text
 http://localhost:8000/docs
@@ -271,114 +151,150 @@ http://localhost:8000/docs
 
 ---
 
-# Supported Analysis Types
+# 🧠 Fraud Detection Rules
 
-## Salary Slip Verification
+## Salary Validation
 
-Validates:
+* SAL001 – Salary Missing
+* SAL002 – Unusually High Salary
+* SAL003 – Payroll Arithmetic Validation
 
-* Salary extraction
-* Salary consistency
-* Payroll arithmetic
+## Bank Validation
 
-Required Document:
+* DOC001 – Low Transaction Activity
+* BANK001 – Balance Reconciliation Validation
 
-* Salary Slip PDF
+## Metadata Validation
 
----
+* META001 – Low OCR Confidence
+* META002 – Invalid Page Count
+* META003 – Missing Producer Metadata
 
-## Bank Statement Verification
+## Cross Validation
 
-Validates:
-
-* Salary credit extraction
-* Transaction activity
-* Balance reconciliation
-
-Required Document:
-
-* Bank Statement PDF
-
----
-
-## Combined Verification
-
-Validates:
-
-* Salary amount matching
-* Salary month matching
-* Salary credit verification
-* Cross-document consistency
-
-Required Documents:
-
-* Salary Slip PDF
-* Bank Statement PDF
+* CROSS001 – Salary Mismatch
+* CROSS002 – Month Mismatch
+* CROSS003 – Missing Salary Credit
+* CROSS004 – Invalid Bank Statement
+* CROSS005 – Invalid Salary Slip
 
 ---
 
-# Testing
+# 🧪 Testing
 
-All planned proof-of-concept scenarios have been successfully validated.
+The following scenarios have been successfully validated:
 
-Refer:
+✅ Valid Salary Slip
+
+✅ Fraud Salary Slip (SAL003)
+
+✅ Valid Bank Statement
+
+✅ Fraud Bank Statement (BANK001)
+
+✅ Combined Verification
+
+Refer to:
 
 ```text
 TESTING.md
 ```
 
-for detailed testing evidence.
+for detailed test evidence.
 
 ---
 
-# Future Enhancements
+# 🧠 Technologies Used
 
-Refer:
+* Streamlit
+* FastAPI
+* Celery
+* Redis
+* Python
+* OCR Processing
+* OpenAI / Azure OpenAI
+* JSON Rule Engine
+
+---
+
+# 📈 Current Version
+
+Version: 1.2
+
+Status: Demo Ready
+
+Implemented:
+
+✅ Salary Slip Verification
+
+✅ Bank Statement Verification
+
+✅ Combined Verification
+
+✅ SAL003 Payroll Validation
+
+✅ BANK001 Balance Validation
+
+✅ AI Risk Assessment
+
+---
+
+# 🔮 Future Enhancements
+
+## Phase 2
+
+* SAL004 Amount-in-Words Validation
+* SAL005 Statutory Deduction Validation
+* DOC002 Document Type Validation
+* PDF Authenticity Checks
+* Metadata Consistency Validation
+
+## Phase 3
+
+* AI Agent-based Fraud Investigation
+* ML Fraud Scoring
+* Historical Pattern Analysis
+* Transaction Analytics Engine
+
+## Phase 4
+
+* Docker Support
+* Azure Deployment
+* Real-time Dashboard
+* Audit Repository
+
+Refer to:
 
 ```text
 FUTURE_ENHANCEMENTS.md
 ```
 
-for the product roadmap and future capabilities.
+for detailed roadmap.
 
 ---
 
-# Docker Support
+# 📢 Author
 
-Docker is currently not required.
+Developed as an AI-powered Fraud Detection Proof of Concept demonstrating document verification, fraud analysis, and AI-assisted risk assessment using modern Python and cloud-native architecture patterns.
 
-The application can be executed directly using:
+# 👨‍💻 Author
 
-* Python
-* Redis
-* FastAPI
-* Celery
-* Streamlit
+**Sourabh Pandit**
 
-Future releases may include:
+Generative AI • Agentic AI • Azure PaaS • Cloud-Native .NET Solutions
 
-* Docker
-* Docker Compose
-* Containerized Deployment
+This project was developed as a practical Proof of Concept to explore AI-assisted fraud detection, document intelligence, rule engines, and modern cloud architecture patterns.
 
----
+### Connect
 
-# Limitations
+* LinkedIn: [linkedin Profile](www.linkedin.com/in/sourabh-pandit-b2570212)
+* GitHub: [GitHub URL)](https://github.com/Spandit11)
 
-Current version does not perform:
+### Project Focus Areas
 
-* PDF tampering detection
-* Digital signature validation
-* Amount-in-words validation
-* Statutory deduction validation
-* Multi-month trend analysis
-
-These capabilities are planned for future releases.
-
----
-
-# License
-
-Internal Proof of Concept (POC)
-
-Developed for learning, experimentation, and demonstration purposes.
+* AI-Powered Fraud Detection
+* Document Intelligence
+* Banking Domain Validation
+* FastAPI & Streamlit
+* Celery & Redis
+* Azure Architecture Patterns
